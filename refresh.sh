@@ -3,7 +3,7 @@
 docker pull fedora:latest
 
 # Now build all envs
-for env in base nodejs ipsilon;
+for env in base nodejs ipsilon python;
 do
     (
         cd $env
