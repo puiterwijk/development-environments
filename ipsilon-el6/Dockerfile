@@ -1,4 +1,4 @@
-FROM puiterwijk.org/development/base-el7
+FROM puiterwijk.org/development/base-el6
 MAINTAINER Patrick Uiterwijk <patrick@puiterwijk.org>
 
 RUN yum install -y make pylint python-pep8 python-openid python-openid-teams \
