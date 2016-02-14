@@ -5,6 +5,6 @@ VOLUME ["/project"]
 RUN useradd docker -d /project -M \
     && usermod -aG wheel docker
 
-RUN yum install -y vim
+RUN yum install -y vim epel-release
 
 ENTRYPOINT ["/bin/bash"]
