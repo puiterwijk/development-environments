@@ -1,0 +1,6 @@
+FROM puiterwijk.org/development/base
+MAINTAINER Patrick Uiterwijk <patrick@puiterwijk.org>
+
+RUN dnf install -y fedora-review
+
+RUN usermod -aG mock docker
