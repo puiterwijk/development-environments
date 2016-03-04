@@ -1,4 +1,4 @@
-FROM fedora:23
+FROM puiterwijk.org/base/fedora:23
 MAINTAINER Patrick Uiterwijk <patrick@puiterwijk.org>
 
 VOLUME ["/project"]

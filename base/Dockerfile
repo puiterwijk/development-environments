@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM puiterwijk.org/base/fedora:rawhide
 MAINTAINER Patrick Uiterwijk <patrick@puiterwijk.org>
 
 VOLUME ["/project"]

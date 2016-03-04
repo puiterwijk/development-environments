@@ -3,4 +3,5 @@ MAINTAINER Patrick Uiterwijk <patrick@puiterwijk.org>
 
 RUN dnf install -y python-cryptography python-flask python-fedora python-openid \
                    python-openid-cla python-openid-teams python-sqlalchemy \
-                   python-virtualenvwrapper python-jinja2 python-markdown
+                   python-virtualenvwrapper python-jinja2 python-markdown fedmsg \
+                   python-mwclient
