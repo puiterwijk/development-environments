@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash -xe
 # First pull down the latest versions of base envs
 #docker pull fedora:latest
 
