@@ -3,10 +3,22 @@
 #docker pull fedora:latest
 
 # Now build all envs
-for env in base base-f22 base-f23 base-el7 base-el6 nodejs ipsilon ipsilon-f22 ipsilon-f23 ipsilon-el7 ipsilon-el6 python packaging servers;
+function buildenv() {
+    if [ "$1" != "refresh.sh" ];
+    then
+        (
+            cd $1
+            docker build -t puiterwijk.org/development/$1:latest .
+        )
+    fi
+}
+
+for env in base*
 do
-    (
-        cd $env
-        docker build -t puiterwijk.org/development/$env:latest .
-    )
+    buildenv $env
+done
+
+for env in *
+do
+    buildenv $env
 done
