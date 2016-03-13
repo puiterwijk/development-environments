@@ -1,24 +1,14 @@
 #!/bin/bash -xe
 # First pull down the latest versions of base envs
-#docker pull fedora:latest
-
-# Now build all envs
-function buildenv() {
-    if [ "$1" != "refresh.sh" ];
-    then
-        (
-            cd $1
-            docker build -t puiterwijk.org/development/$1:latest .
-        )
-    fi
-}
-
-for env in base*
+for fedver in rawhide 22 23;
 do
-    buildenv $env
+    docker pull fedora:$fedver
+    docker tag --force fedora:$fedver puiterwijk.org/development/base/fedora:$fedver
+done
+for centver in 6 7;
+do
+    docker pull centos:$centver
+    docker tag --force centos:$centver puiterwijk.org/development/base/centos:$centver
 done
 
-for env in *
-do
-    buildenv $env
-done
+docker run --privileged --rm=true --name "refresh" -v /var/run:/var/run:rw -v `pwd`:/mnt:r --entrypoint=/bin/bash -t fedora:rawhide -c "dnf install -y python3-yaml python3-docker-py && python3 /mnt/build.py"

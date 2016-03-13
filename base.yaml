@@ -1,0 +1,43 @@
+name: base
+
+maintainer: Patrick Uiterwijk <patrick@puiterwijk.org>
+
+default: rawhide
+
+for_os:
+- rawhide
+- f23
+- f22
+- el7
+- el6
+
+entrypoint: /bin/bash
+
+base:
+- val: base/fedora:rawhide
+  when_os: rawhide
+- val: base/fedora:23
+  when_os: f23
+- val: base/fedora:22
+  when_os: f22
+- val: base/centos:7
+  when_os: el7
+- val: base/centos:6
+  when_os: el6
+
+volumes:
+- /project
+
+packages:
+- vim
+- sudo
+- val: epel-release
+  when_os:
+  - el6
+  - el7
+
+run:
+- useradd -u 1000 docker -d /project -M
+- usermod -aG wheel docker
+- chown docker:docker /project
+- "echo 'docker ALL=(ALL) NOPASSWD: ALL' >/etc/sudoers.d/docker"
