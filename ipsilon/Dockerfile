@@ -1,6 +1,8 @@
 FROM puiterwijk.org/development/base
 MAINTAINER Patrick Uiterwijk <patrick@puiterwijk.org>
 
+RUN dnf install -y fontpackages-filesystem
+
 RUN dnf install -y make pylint python-pep8 python-openid python-openid-teams \
         python-openid-cla python-cherrypy m2crypto lasso-python \
         python-sqlalchemy python-ldap python-pam python-fedora \
