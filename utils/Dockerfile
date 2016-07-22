@@ -17,4 +17,4 @@ ADD id_rsa.pub /homedir/authorized_keys
 
 RUN chown docker:docker /homedir/authorized_keys
 
-#ENTRYPOINT ["/usr/sbin/sshd"]
+ENTRYPOINT ["/usr/sbin/sshd", "-d"]
