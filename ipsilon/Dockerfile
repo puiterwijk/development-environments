@@ -26,3 +26,6 @@ RUN dnf install -y git rpm-build python2-devel audit audit-libs-python3 \
         python2-crypto python2-dns python2-ipaclient quota quota-nls rpcbind setools-libs slang \
         tcp_wrappers timedatex xmlrpc-c xmlrpc-c-client audit-libs libselinux \
         fontpackages-filesystem
+
+# New deps
+RUN dnf install -y etcd python2-python-etcd

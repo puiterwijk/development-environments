@@ -8,4 +8,5 @@ RUN yum install -y make pylint python-pep8 python-openid python-openid-teams \
         openssl mod_wsgi python-jinja2 python-psycopg2 sssd \
         libsss_simpleifp openldap-servers mod_auth_gssapi krb5-server \
         socket_wrapper nss_wrapper python-requests-kerberos python-lesscpy\
-        nodejs-less krb5-workstation python-sssdconfig sqlite
+        nodejs-less krb5-workstation python-sssdconfig sqlite \
+        mod_ssl mod_auth_openidc
