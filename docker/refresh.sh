@@ -13,12 +13,16 @@ function buildenv() {
     fi
 }
 
-for env in base*
-do
-    buildenv $env
-done
+function refresh_base(){
+    for env in base*
+    do
+        buildenv $env
+    done
+}
 
-for env in *
-do
-    buildenv $env
-done
+function refresh_all(){
+    for env in *
+    do
+        buildenv $env
+    done
+}
