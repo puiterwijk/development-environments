@@ -9,4 +9,5 @@ RUN useradd docker -d /project -M \
     && dnf install -y vim sudo \
     && echo "docker ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/docker
 
+WORKDIR /project
 ENTRYPOINT ["/bin/bash"]
