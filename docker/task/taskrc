@@ -1,0 +1,59 @@
+data.location=/tasks
+
+# Color theme (uncomment one to use)
+#include /usr/share/doc/task/rc/light-16.theme
+#include /usr/share/doc/task/rc/light-256.theme
+#include /usr/share/doc/task/rc/dark-16.theme
+#include /usr/share/doc/task/rc/dark-256.theme
+#include /usr/share/doc/task/rc/dark-red-256.theme
+#include /usr/share/doc/task/rc/dark-green-256.theme
+#include /usr/share/doc/task/rc/dark-blue-256.theme
+#include /usr/share/doc/task/rc/dark-violets-256.theme
+#include /usr/share/doc/task/rc/dark-yellow-green.theme
+#include /usr/share/doc/task/rc/dark-gray-256.theme
+
+dateformat=D-M-Y
+dateformat.annotation=D-M-Y
+dateformat.holiday=D-M-Y
+dateformat.report=D-M-Y
+dateformat.edit=D-M-Y H:N
+dateformat.info=D-M-Y H:N
+
+# Bugwarrior UDAs
+uda.bugzillasummary.type=string
+uda.bugzillasummary.label=Bugzilla Summary
+uda.errataid.type=numeric
+uda.errataid.label=Errata #
+uda.errataadvisoryname.type=string
+uda.errataadvisoryname.label=Advisory name
+uda.tracurl.type=string
+uda.tracurl.label=Trac URL
+uda.tracnumber.type=numeric
+uda.tracnumber.label=Trac Number
+uda.erratastatus.type=string
+uda.erratastatus.label=Status
+uda.bugzillaurl.type=string
+uda.bugzillaurl.label=Bugzilla URL
+uda.erratasynopsis.type=string
+uda.erratasynopsis.label=Synopsis
+uda.tracsummary.type=string
+uda.tracsummary.label=Trac Summary
+uda.bugzillastatus.type=string
+uda.bugzillastatus.label=Bugzilla Status
+uda.bugzillabugid.type=numeric
+uda.bugzillabugid.label=Bugzilla Bug ID
+uda.erratatype.type=string
+uda.erratatype.label=Errata type
+uda.bugzillaneedinfo.type=date
+uda.bugzillaneedinfo.label=Bugzilla Needinfo
+uda.erratarelease.type=string
+uda.erratarelease.label=Product release
+uda.errataupdatedate.type=date
+uda.errataupdatedate.label=Update date
+uda.errataproduct.type=string
+uda.errataproduct.label=Product
+uda.errataissuedate.type=date
+uda.errataissuedate.label=Issuance date
+# END Bugwarrior UDAs
+
+nag=You ROCK!
