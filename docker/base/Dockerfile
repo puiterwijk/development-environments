@@ -1,4 +1,4 @@
-FROM fedora:rawhide
+FROM registry.fedoraproject.org/fedora:rawhide
 MAINTAINER Patrick Uiterwijk <patrick@puiterwijk.org>
 
 VOLUME ["/project"]
