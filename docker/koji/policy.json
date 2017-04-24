@@ -53,7 +53,7 @@
 		{
 			"names": [
 				"keyctl",
-                "request_key"
+				"request_key"
 			],
 			"action": "SCMP_ACT_ALLOW",
 			"args": [],
