@@ -26,3 +26,10 @@ function refresh_all(){
         buildenv $env
     done
 }
+
+function refresh_all_async(){
+    for env in *
+    do
+        buildenv $env &
+    done
+}
