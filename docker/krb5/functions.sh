@@ -1,6 +1,6 @@
 #!/bin/bash
 function dkcmd() {
-    cmd=$@
+    cmd=$1
     shift
     sudo docker run --rm=true -it --user docker --security-opt seccomp=$HOME/Documents/Development/Environments/docker/krb5/policy.json --cap-drop=ALL --entrypoint=/bin/$cmd puiterwijk.org/development/krb5 $@
 }
