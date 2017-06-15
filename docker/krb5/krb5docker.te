@@ -1,0 +1,11 @@
+
+module krb5docker 1.0;
+
+require {
+	type unconfined_t;
+	type container_t;
+	class key write;
+}
+
+#============= container_t ==============
+allow container_t unconfined_t:key write;
