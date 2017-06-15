@@ -23,7 +23,7 @@ RUN dnf install -y git rpm-build python2-devel audit audit-libs-python3 \
         mod_lookup_identity mozjs17 newt newt-python3 nfs-utils ntp ntpdate oddjob \
         oddjob-mkhomedir open-sans-fonts pam_krb5 policycoreutils policycoreutils-python-utils \
         policycoreutils-python3 polkit polkit-libs polkit-pkla-compat psmisc python-IPy-python3 \
-        python2-crypto python2-dns python2-ipaclient quota quota-nls rpcbind setools-libs slang \
+        python2-crypto python2-dns python2-ipaclient quota quota-nls rpcbind slang \
         tcp_wrappers timedatex xmlrpc-c xmlrpc-c-client audit-libs libselinux \
         fontpackages-filesystem
 
