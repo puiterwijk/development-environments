@@ -7,8 +7,10 @@ function buildenv() {
     if [ "$1" != "refresh.sh" ];
     then
         (
-            cd $1
-            docker build -t puiterwijk.org/development/$1:latest .
+	    image="$1"
+	    shift
+            cd $image
+            docker build $@ -t puiterwijk.org/development/$image:latest .
         )
     fi
 }
