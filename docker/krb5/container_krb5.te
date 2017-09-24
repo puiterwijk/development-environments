@@ -1,0 +1,19 @@
+policy_module(container_krb5, 1.0)
+
+virt_sandbox_domain_template(container_krb5)
+# virt_sandbox_net_domain(container_krb5_t)
+gen_require(`
+    attribute   sandbox_net_domain;
+    type unconfined_t;
+    class key write;
+')
+
+typeattribute container_krb5_t sandbox_net_domain;
+virt_default_capabilities(container_krb5_t)
+container_runtime_typebounds(container_krb5_t)
+kernel_rw_rpc_sysctls(container_krb5_t)
+kernel_rw_net_sysctls(container_krb5_t)
+kernel_read_messages(container_krb5_t)
+kernel_read_network_state(container_krb5_t)
+
+allow container_krb5_t unconfined_t:key write;

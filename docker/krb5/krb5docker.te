@@ -4,8 +4,8 @@ module krb5docker 1.0;
 require {
 	type unconfined_t;
 	type container_t;
-	class key write;
+	class key { write view read };
 }
 
 #============= container_t ==============
-allow container_t unconfined_t:key write;
+allow container_t unconfined_t:key { write view read };
