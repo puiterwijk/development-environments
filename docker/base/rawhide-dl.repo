@@ -1,0 +1,11 @@
+[rawhide-dl]
+name=Fedora - Rawhide - Developmental packages for the next Fedora release DL
+failovermethod=priority
+baseurl=https://dl.fedoraproject.org/pub/fedora/linux/development/rawhide//Everything/$basearch/os/
+enabled=1
+metadata_expire=6h
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
+skip_if_unavailable=False

@@ -2,6 +2,9 @@ FROM registry.fedoraproject.org/fedora:rawhide
 MAINTAINER Patrick Uiterwijk <patrick@puiterwijk.org>
 
 VOLUME ["/project"]
+# Stupid glibc/rpmdb/... bug
+RUN dnf update -y glibc || true
+
 RUN useradd docker -d /project -M \
     && usermod -aG wheel docker \
     && chown docker:docker /project \
