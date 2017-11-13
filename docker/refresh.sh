@@ -10,7 +10,7 @@ function buildenv() {
 	    image="$1"
 	    shift
             cd $image
-            sudo docker build $@ -t puiterwijk.org/development/$image:latest .
+            docker build $@ -t puiterwijk.org/development/$image:latest .
         )
     fi
 }
