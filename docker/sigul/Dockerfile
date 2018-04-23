@@ -8,4 +8,4 @@ RUN dnf install -y autoconf automake make gcc fedora-packager python-nss \
                    python-gssapi mod_auth_gssapi socket_wrapper nss_wrapper \
                    openldap-servers mod_ssl resolv_wrapper krb5-server-ldap \
 		   python-gpgme ostree python-gpgme ostree openldap-clients \
-		   bandit
+		   bandit python2-pep8
