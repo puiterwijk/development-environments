@@ -57,3 +57,11 @@ uda.errataissuedate.label=Issuance date
 # END Bugwarrior UDAs
 
 nag=You ROCK!
+
+
+taskd.certificate=/tasks/certificate.pem
+taskd.key=/tasks/key.pem
+taskd.ca=/tasks/ca.pem
+taskd.server=taskwarrior.inthe.am:53589
+taskd.credentials=inthe_am/puiterwijk/46e9db96-23f7-4667-ab1e-5322326db7e4
+taskd.trust=ignore hostname
