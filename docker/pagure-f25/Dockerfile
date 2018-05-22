@@ -9,7 +9,7 @@ RUN useradd docker -d /project -M \
     && dnf install -y vim sudo \
     && echo "docker ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/docker
 
-WORKDIR /project
+WORKDIR /userhome/project
 ENTRYPOINT ["/bin/bash"]
 
 RUN dnf install -y python2-devel python-setuptools python-nose py-bcrypt python-alembic \
